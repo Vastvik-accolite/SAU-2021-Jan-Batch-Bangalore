@@ -1,7 +1,8 @@
 /*1.Write a JavaScript program to find all distinct prime factors of a given integer.*/
 
 function findPrimeFactors(x){
-    if(typeof(x) !== typeof(1)) return "Invalid parameter! Paremeter should be a number";
+    if(typeof(x) !== typeof(1)) return "Invalid parameter! Paremeter should be an Integer";
+    if(Math.floor(x) != Math.ceil(x)) return "Number cant be a floating point."
     console.log("Primes factors of x are: ");
     var i;
     for(i=2; i<=x/2; ++i){
