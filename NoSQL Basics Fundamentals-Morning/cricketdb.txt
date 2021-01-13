@@ -1,0 +1,76 @@
+/* created a new bucket cricketdb and created a primary index on cricketdb */
+
+create primary index on cricketdb;
+
+
+
+/* Inserting values in the cricketdb */
+
+insert into cricketdb values
+("1", {
+ "Name" : "Sachin Tendulkar",
+ "jerseyNo" : 10,
+ "age" : 47,
+ "average" : 53.8,
+ "runsScored" : 28000 ,
+ "wicketsTaken": 29
+}),
+("2", {
+ "Name" : "Ricky Ponting",
+ "jerseyNo" : 14,
+ "age" : 46,
+ "average" : 51.85,
+ "runsScored" : 26432 ,
+ "wicketsTaken": 29
+}),
+("3", {
+ "Name" : "Yuvraj Singh",
+ "jerseyNo" : 12,
+ "age" : 39,
+ "average" : 33.92,
+ "runsScored" : 15733 ,
+ "wicketsTaken": 97
+}),
+("4", {
+ "Name" : "AB de Villiers",
+ "jerseyNo" : 17,
+ "age" : 36,
+ "average" : 50.66,
+ "runsScored" : 13500 ,
+ "wicketsTaken": 32
+}),
+("5", {
+ "Name" : "Adam Gilchrist",
+ "jerseyNo" : 18,
+ "age" : 49,
+ "average" : 47.60,
+ "runsScored" : 17980 ,
+ "wicketsTaken": 0
+})
+
+
+
+
+/* Querying the cricketdb for documents where runs scored are greater than a particular value*/
+
+select * from cricketdb where runsScored > 15000;
+
+select * from cricketdb where runsScored > 20000;
+
+select * from cricketdb where runsScored > 27000;
+
+
+/* Removing primary index on cricketdb */
+
+drop primary index on cricketdb;
+
+
+/* Create a new index on cricketdb */
+
+create index runs on cricketdb (runsScored);
+
+
+
+
+
+
