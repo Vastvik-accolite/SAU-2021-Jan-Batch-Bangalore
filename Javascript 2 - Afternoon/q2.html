@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 2</title>
+    <script src="q2.js"></script>
+</head>
+
+<body>
+    
+    <form id="details">
+        <label>First Name:</label> 
+        <input type="text" id="fname" name="fname" placeholder="First Name"/><br> <br>
+
+        <label>Last Name:</label> 
+        <input type="text" id="lname" name="lname" placeholder="Last Name"/><br> <br>
+        
+        <label>Gender:</label>
+        <input type="radio" id="male" name="gender" value="male">
+        <label for="male">Male</label>
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">Female</label><br> <br>
+        
+        <label> Age </label>
+        <input type="text" id="age" name="age" placeholder="Age"/><br> <br>
+
+        <label> Roll No. </label>
+        <input type="text" id="roll" name="roll" placeholder="Roll No."/><br> <br>
+
+        <label> DOB </label>
+        <input type="date" id="dob" name="dob" placeholder="dob"/><br> <br>
+
+        <input type="submit" value="Submit" onclick="validate(event)" />
+        
+    </form>
+    <input type="text" id="occupation" placeholder="Enter Occupation..." hidden/><br>
+    <button id="sub2" hidden onclick="addOccupation()">Add Occupation</button>
+
+    <input type="text" id="get" placeholder="Get Student by roll No..." hidden/><br>
+    <button id="getDetails" hidden onclick="getStudentDetails()">Get Details</button>
+
+    <div id="printDetails"></div>
+
+
+</body>
+</html>
